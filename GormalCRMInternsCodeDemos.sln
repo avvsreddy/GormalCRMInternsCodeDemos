@@ -7,9 +7,17 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PLTDemo1", "PLTDemo1\PLTDem
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PLTLab17", "PLTLab17\PLTLab17.csproj", "{71BD81BB-65E9-4C4B-8EC6-87FC6D64A7F2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrainerTraineeApp", "TrainerTraineeApp\TrainerTraineeApp.csproj", "{70B63343-1129-4404-B591-8DBFBE6C81BF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TrainerTraineeApp", "TrainerTraineeApp\TrainerTraineeApp.csproj", "{70B63343-1129-4404-B591-8DBFBE6C81BF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IDELanguageAPP", "IDELanguageAPP\IDELanguageAPP.csproj", "{2682CD15-386B-4751-B484-2158B35E3410}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IDELanguageAPP", "IDELanguageAPP\IDELanguageAPP.csproj", "{2682CD15-386B-4751-B484-2158B35E3410}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "OO Programming Concepts", "OO Programming Concepts", "{DC422E61-1DA8-422A-80A0-F322A70028A7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OOConcepts", "OOConcepts\OOConcepts.csproj", "{687A352C-EDBD-4684-B199-B6E524CBB827}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArraysAndCollectionsDemo1", "ArraysAndCollectionsDemo1\ArraysAndCollectionsDemo1.csproj", "{D83DE0BB-8A94-443B-B007-22C7A34796FD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CollectionsDemo", "CollectionsDemo\CollectionsDemo.csproj", "{30A54DCD-4ACF-4E6E-A70E-18211399B76A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,9 +41,26 @@ Global
 		{2682CD15-386B-4751-B484-2158B35E3410}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2682CD15-386B-4751-B484-2158B35E3410}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2682CD15-386B-4751-B484-2158B35E3410}.Release|Any CPU.Build.0 = Release|Any CPU
+		{687A352C-EDBD-4684-B199-B6E524CBB827}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{687A352C-EDBD-4684-B199-B6E524CBB827}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{687A352C-EDBD-4684-B199-B6E524CBB827}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{687A352C-EDBD-4684-B199-B6E524CBB827}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D83DE0BB-8A94-443B-B007-22C7A34796FD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D83DE0BB-8A94-443B-B007-22C7A34796FD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D83DE0BB-8A94-443B-B007-22C7A34796FD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D83DE0BB-8A94-443B-B007-22C7A34796FD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{30A54DCD-4ACF-4E6E-A70E-18211399B76A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{30A54DCD-4ACF-4E6E-A70E-18211399B76A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{30A54DCD-4ACF-4E6E-A70E-18211399B76A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{30A54DCD-4ACF-4E6E-A70E-18211399B76A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{687A352C-EDBD-4684-B199-B6E524CBB827} = {DC422E61-1DA8-422A-80A0-F322A70028A7}
+		{D83DE0BB-8A94-443B-B007-22C7A34796FD} = {DC422E61-1DA8-422A-80A0-F322A70028A7}
+		{30A54DCD-4ACF-4E6E-A70E-18211399B76A} = {DC422E61-1DA8-422A-80A0-F322A70028A7}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {4E60B693-584C-479B-893E-41D1BC491C8E}
