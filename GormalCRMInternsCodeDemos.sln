@@ -33,6 +33,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CalculatorClassLibrary", "C
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SuperCalculatorWinFormsApp", "SuperCalculatorWinFormsApp\SuperCalculatorWinFormsApp.csproj", "{0D359E19-6134-456A-9994-E0AE92D38A80}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Ref and Labs", "Ref and Labs", "{A4D32027-3A2B-4EA5-8F52-53EBC3CA0BDC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RefMaterialsAndLabs", "RefMaterialsAndLabs\RefMaterialsAndLabs.csproj", "{27D71EFA-1F28-48D3-8C33-66F88630A3D2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -79,6 +83,10 @@ Global
 		{0D359E19-6134-456A-9994-E0AE92D38A80}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0D359E19-6134-456A-9994-E0AE92D38A80}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0D359E19-6134-456A-9994-E0AE92D38A80}.Release|Any CPU.Build.0 = Release|Any CPU
+		{27D71EFA-1F28-48D3-8C33-66F88630A3D2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{27D71EFA-1F28-48D3-8C33-66F88630A3D2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{27D71EFA-1F28-48D3-8C33-66F88630A3D2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{27D71EFA-1F28-48D3-8C33-66F88630A3D2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -93,6 +101,7 @@ Global
 		{27EA17F0-6867-4695-B86C-F53350CF9EDF} = {9C13C97E-ECC1-4DC7-8DDA-7107467693DA}
 		{0160FC9E-2B6E-43FF-8955-48457C25FD87} = {2E03B4A3-6E75-4848-8B48-1BBF304BDBE3}
 		{0D359E19-6134-456A-9994-E0AE92D38A80} = {82572673-4F9C-427E-B27D-ED7F2122717A}
+		{27D71EFA-1F28-48D3-8C33-66F88630A3D2} = {A4D32027-3A2B-4EA5-8F52-53EBC3CA0BDC}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {4E60B693-584C-479B-893E-41D1BC491C8E}
