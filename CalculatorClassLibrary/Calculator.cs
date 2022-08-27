@@ -20,8 +20,13 @@ namespace SuperCalculatorConsoleApp
         public static int FindSum(int a, int b) // 2 + 2 = 4/0
         {
             // both the input must me positive, non zero and even numbers only
-            if (a > 0 && b > 0 & a % 2 == 0 && b % 2 == 0)
+            //if (a > 0 && b > 0 & a % 2 == 0 && b % 2 == 0)
+
+            if (a > 0 && b > 0 && (a % 2 == 0 && b % 2 == 0))
+            {
                 return a + b;
+            }
+
             else
             {
                 InvalidInputException ex = new InvalidInputException("Enter non zero positive even number");

@@ -35,9 +35,9 @@ for (int i = 0; i < numbers.Length; i++)
     Console.WriteLine(numbers[i]);
 }
 
-foreach (int n in numbers)
+foreach (int nn in numbers)
 {
-    Console.WriteLine(n);
+    Console.WriteLine(nn);
 }
 
 
