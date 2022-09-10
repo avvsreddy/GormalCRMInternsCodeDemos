@@ -49,6 +49,8 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="Documents\Design Patterns - Venkat.ppt" />
+    <None Include="Documents\SOLID Design Principles - Venkat.pdf" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
