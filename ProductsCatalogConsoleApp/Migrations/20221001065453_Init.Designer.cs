@@ -2,6 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using ProductsCatalogConsoleApp.DataAccess;
 
@@ -10,9 +11,10 @@ using ProductsCatalogConsoleApp.DataAccess;
 namespace ProductsCatalogConsoleApp.Migrations
 {
     [DbContext(typeof(ProductsCatalogDbContext))]
-    partial class ProductsCatalogDbContextModelSnapshot : ModelSnapshot
+    [Migration("20221001065453_Init")]
+    partial class Init
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -52,6 +54,10 @@ namespace ProductsCatalogConsoleApp.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("PersonID"), 1L, 1);
 
+                    b.Property<string>("Discriminator")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("Email")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -67,6 +73,8 @@ namespace ProductsCatalogConsoleApp.Migrations
                     b.HasKey("PersonID");
 
                     b.ToTable("People");
+
+                    b.HasDiscriminator<string>("Discriminator").HasValue("Person");
                 });
 
             modelBuilder.Entity("ProductsCatalogConsoleApp.Entities.Product", b =>
@@ -121,7 +129,7 @@ namespace ProductsCatalogConsoleApp.Migrations
                     b.Property<int>("Discount")
                         .HasColumnType("int");
 
-                    b.ToTable("Customers");
+                    b.HasDiscriminator().HasValue("Customer");
                 });
 
             modelBuilder.Entity("ProductsCatalogConsoleApp.Entities.Supplier", b =>
@@ -135,7 +143,7 @@ namespace ProductsCatalogConsoleApp.Migrations
                     b.Property<int>("Rating")
                         .HasColumnType("int");
 
-                    b.ToTable("Suppliers");
+                    b.HasDiscriminator().HasValue("Supplier");
                 });
 
             modelBuilder.Entity("ProductsCatalogConsoleApp.Entities.Product", b =>
@@ -161,24 +169,6 @@ namespace ProductsCatalogConsoleApp.Migrations
                         .WithMany()
                         .HasForeignKey("SuppliersPersonID")
                         .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-                });
-
-            modelBuilder.Entity("ProductsCatalogConsoleApp.Entities.Customer", b =>
-                {
-                    b.HasOne("ProductsCatalogConsoleApp.Entities.Person", null)
-                        .WithOne()
-                        .HasForeignKey("ProductsCatalogConsoleApp.Entities.Customer", "PersonID")
-                        .OnDelete(DeleteBehavior.ClientCascade)
-                        .IsRequired();
-                });
-
-            modelBuilder.Entity("ProductsCatalogConsoleApp.Entities.Supplier", b =>
-                {
-                    b.HasOne("ProductsCatalogConsoleApp.Entities.Person", null)
-                        .WithOne()
-                        .HasForeignKey("ProductsCatalogConsoleApp.Entities.Supplier", "PersonID")
-                        .OnDelete(DeleteBehavior.ClientCascade)
                         .IsRequired();
                 });
 
