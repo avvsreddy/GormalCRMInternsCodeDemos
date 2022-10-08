@@ -107,18 +107,22 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Multi Threading Labs", "Mul
 		..\..\..\..\Training Materials 2020\S\Materials and Labs\Materials and Labs\Eurofins April 2019 Batch\Iteration 2\Threads\Spell Checker - Multi Threading Case Study.pdf = ..\..\..\..\Training Materials 2020\S\Materials and Labs\Materials and Labs\Eurofins April 2019 Batch\Iteration 2\Threads\Spell Checker - Multi Threading Case Study.pdf
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LinqLab", "LinqLab\LinqLab.csproj", "{AD599512-6563-4292-AE4E-109887286971}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LinqLab", "LinqLab\LinqLab.csproj", "{AD599512-6563-4292-AE4E-109887286971}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "EF Demos", "EF Demos", "{22FA2642-75A8-48A0-BEDD-983C8B3A3A50}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProductsCatalogConsoleApp", "ProductsCatalogConsoleApp\ProductsCatalogConsoleApp.csproj", "{7D61983D-739C-4589-AB04-2F97D8EAA395}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProductsCatalogConsoleApp", "ProductsCatalogConsoleApp\ProductsCatalogConsoleApp.csproj", "{7D61983D-739C-4589-AB04-2F97D8EAA395}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "EF", "EF", "{AA16A30F-26D9-44AE-90F8-AC79FC269842}"
 	ProjectSection(SolutionItems) = preProject
-		..\..\..\..\Training Materials 2020\S\Materials and Labs\Materials and Labs\Eurofins April 2019 Batch\Iteration 2\EF\02-Entity Framework Hands on Labs - SellPhones.pdf = ..\..\..\..\Training Materials 2020\S\Materials and Labs\Materials and Labs\Eurofins April 2019 Batch\Iteration 2\EF\02-Entity Framework Hands on Labs - SellPhones.pdf
 		..\..\..\..\Training Materials 2020\S\Materials and Labs\Materials and Labs\Eurofins April 2019 Batch\Iteration 2\EF\01-EF Hands-On Labs.pdf = ..\..\..\..\Training Materials 2020\S\Materials and Labs\Materials and Labs\Eurofins April 2019 Batch\Iteration 2\EF\01-EF Hands-On Labs.pdf
+		..\..\..\..\Training Materials 2020\S\Materials and Labs\Materials and Labs\Eurofins April 2019 Batch\Iteration 2\EF\02-Entity Framework Hands on Labs - SellPhones.pdf = ..\..\..\..\Training Materials 2020\S\Materials and Labs\Materials and Labs\Eurofins April 2019 Batch\Iteration 2\EF\02-Entity Framework Hands on Labs - SellPhones.pdf
 		..\..\..\..\Training Materials 2020\S\Materials and Labs\Materials and Labs\Eurofins April 2019 Batch\Iteration 2\EF\Ref\EF6Ref.zip = ..\..\..\..\Training Materials 2020\S\Materials and Labs\Materials and Labs\Eurofins April 2019 Batch\Iteration 2\EF\Ref\EF6Ref.zip
 	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "MVC Demo App", "MVC Demo App", "{B5C768C0-7594-414D-8F4F-5095E653ABA5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KnowledgeHubPortalMVCWebApplication", "KnowledgeHubPortalMVCWebApplication\KnowledgeHubPortalMVCWebApplication.csproj", "{B491FDEF-36C3-447F-969C-A2BA5D4B8B16}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -266,6 +270,10 @@ Global
 		{7D61983D-739C-4589-AB04-2F97D8EAA395}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7D61983D-739C-4589-AB04-2F97D8EAA395}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7D61983D-739C-4589-AB04-2F97D8EAA395}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B491FDEF-36C3-447F-969C-A2BA5D4B8B16}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B491FDEF-36C3-447F-969C-A2BA5D4B8B16}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B491FDEF-36C3-447F-969C-A2BA5D4B8B16}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B491FDEF-36C3-447F-969C-A2BA5D4B8B16}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -309,6 +317,7 @@ Global
 		{AD599512-6563-4292-AE4E-109887286971} = {629E99D4-C6A1-44D9-9C21-96850B9CF081}
 		{7D61983D-739C-4589-AB04-2F97D8EAA395} = {22FA2642-75A8-48A0-BEDD-983C8B3A3A50}
 		{AA16A30F-26D9-44AE-90F8-AC79FC269842} = {A4D32027-3A2B-4EA5-8F52-53EBC3CA0BDC}
+		{B491FDEF-36C3-447F-969C-A2BA5D4B8B16} = {B5C768C0-7594-414D-8F4F-5095E653ABA5}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {4E60B693-584C-479B-893E-41D1BC491C8E}
