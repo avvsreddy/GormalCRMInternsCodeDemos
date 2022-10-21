@@ -36,5 +36,13 @@ namespace KnowledgeHubPortalMVCWebApplication.Models.DataAccess
         {
             return db.Catagories.Find(id);
         }
+
+        public List<Catagory> Search(string data)
+        {
+            var catagories = (from c in db.Catagories
+                              where c.Name.ToLower().Contains(data.ToLower()) || c.Description.ToLower().Contains(data.ToLower())
+                              select c).ToList();
+            return catagories;
+        }
     }
 }

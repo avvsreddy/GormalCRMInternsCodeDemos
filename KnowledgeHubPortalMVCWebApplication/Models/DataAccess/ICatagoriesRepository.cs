@@ -12,5 +12,7 @@ namespace KnowledgeHubPortalMVCWebApplication.Models.DataAccess
 
         void Delete(int id);
 
+        List<Catagory> Search(string data);
+
     }
 }

@@ -1,4 +1,5 @@
 ﻿using KnowledgeHubPortalMVCWebApplication.Models.DataAccess;
+using KnowledgeHubPortalMVCWebApplication.Models.Entities;
 using Microsoft.AspNetCore.Mvc;
 
 namespace KnowledgeHubPortalMVCWebApplication.Controllers
@@ -8,11 +9,41 @@ namespace KnowledgeHubPortalMVCWebApplication.Controllers
 
         ICatagoriesRepository repo = new CatagoriesRepository();
 
-        public IActionResult Index()
+
+        // .../catagories/index
+        public IActionResult Index(string data = null)
         {
-            // fetch the catagories info from model
-            var catagories = repo.GetCatagories();
+            List<Catagory> catagories = null;
+            if (data == null)
+            {
+                // fetch all catagories info from model
+                catagories = repo.GetCatagories();
+            }
+            else
+            {
+                catagories = repo.Search(data);
+            }
             return View(catagories);
         }
+
+        [HttpGet]
+        public IActionResult Create()
+        {
+            // return a view for collecting data
+            return View();
+        }
+
+        [HttpPost]
+        public IActionResult Create(Catagory catagory)
+        {
+            // collects data from view and send to model
+            if (!ModelState.IsValid)
+            {
+                return View();
+            }
+            repo.Create(catagory);
+            return RedirectToAction("Index");
+        }
+
     }
 }
