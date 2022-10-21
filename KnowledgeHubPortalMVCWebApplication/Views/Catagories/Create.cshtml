@@ -1,13 +1,21 @@
-﻿
+﻿@model KnowledgeHubPortalMVCWebApplication.Models.Entities.Catagory
+
+
 
 <form action="/Catagories/Create" method="post">
 
     Enter Catagory Name<br />
-    <input type="text" name="Name" value="" /><br />
+    <input type="text" asp-for="Name" />
+    <span asp-validation-for="Name"></span>
+    <br />
     Enter Catagory Description<br />
-    <textarea cols="60" rows="5" name="Description"></textarea><br />
+    <textarea cols="60" rows="5" asp-for="Description"></textarea>
+    <span asp-validation-for="Description"></span>
+    <br />
     <input type="submit" name="btnSubmit" value="Create" class="btn btn-primary" />
 
-
-
 </form>
+@section Scripts
+{
+<partial name="_ValidationScriptsPartial" />
+}

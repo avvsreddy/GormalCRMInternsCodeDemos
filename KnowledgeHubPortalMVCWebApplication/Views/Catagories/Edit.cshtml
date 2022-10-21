@@ -1,0 +1,13 @@
+﻿@model KnowledgeHubPortalMVCWebApplication.Models.Entities.Catagory
+
+<h1>Edit Catagory</h1>
+<hr />
+<form action="/Catagories/Edit" method="post">
+    Modify Catagory Name<br />
+    <input type="text" asp-for="Name" value="@Model.Name" /><br />
+    Modify Description<br />
+    <textarea asp-for="Description" rows="6" cols="60" >@Model.Description</textarea><br />
+    <input type="hidden" asp-for="CatagoryID" value="@Model.CatagoryID" />
+
+    <input type="submit" name="btnSubmit" value="Update" />
+</form>
