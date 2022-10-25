@@ -14,6 +14,7 @@ namespace KnowledgeHubPortalMVCWebApplication.Models.DataAccess
 
         // map entity class to a table
         public DbSet<Catagory> Catagories { get; set; }
+        public DbSet<Article> Articles { get; set; }
 
         // configure the table
 

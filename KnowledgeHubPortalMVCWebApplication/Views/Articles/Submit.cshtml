@@ -1,0 +1,51 @@
+﻿@model KnowledgeHubPortalMVCWebApplication.Models.Entities.Article
+
+@{
+    ViewData["Title"] = "Submit";
+}
+
+<h1>Submit Article</h1>
+<h3>@TempData["Message"]</h3>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Submit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+           
+            <div class="form-group">
+                <label asp-for="Title" class="control-label"></label>
+                <input asp-for="Title" class="form-control" />
+                <span asp-validation-for="Title" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Url" class="control-label"></label>
+                <input asp-for="Url" class="form-control" />
+                <span asp-validation-for="Url" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Description" class="control-label"></label>
+                <textarea asp-for="Description" class="form-control" rows="6" cols="60"></textarea>
+                <span asp-validation-for="Description" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CatagoryID" class="control-label"></label>
+                <select asp-items=@ViewBag.SelectCatagories asp-for="CatagoryID">
+                    <option>Select Catagory</option>
+                </select>
+                <span asp-validation-for="CatagoryID" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

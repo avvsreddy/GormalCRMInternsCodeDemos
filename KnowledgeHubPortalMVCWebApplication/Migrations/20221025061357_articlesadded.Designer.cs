@@ -4,6 +4,7 @@ using KnowledgeHubPortalMVCWebApplication.Models.DataAccess;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,10 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace KnowledgeHubPortalMVCWebApplication.Migrations
 {
     [DbContext(typeof(KHPortalDbContext))]
-    partial class KHPortalDbContextModelSnapshot : ModelSnapshot
+    [Migration("20221025061357_articlesadded")]
+    partial class articlesadded
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -29,6 +31,10 @@ namespace KnowledgeHubPortalMVCWebApplication.Migrations
                         .HasColumnType("int");
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ArticleID"), 1L, 1);
+
+                    b.Property<string>("Catagory")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("CatagoryID")
                         .HasColumnType("int");
@@ -57,8 +63,6 @@ namespace KnowledgeHubPortalMVCWebApplication.Migrations
 
                     b.HasKey("ArticleID");
 
-                    b.HasIndex("CatagoryID");
-
                     b.ToTable("Articles");
                 });
 
@@ -82,17 +86,6 @@ namespace KnowledgeHubPortalMVCWebApplication.Migrations
                     b.HasKey("CatagoryID");
 
                     b.ToTable("Catagories");
-                });
-
-            modelBuilder.Entity("KnowledgeHubPortalMVCWebApplication.Models.Entities.Article", b =>
-                {
-                    b.HasOne("KnowledgeHubPortalMVCWebApplication.Models.Entities.Catagory", "Catagory")
-                        .WithMany()
-                        .HasForeignKey("CatagoryID")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Catagory");
                 });
 #pragma warning restore 612, 618
         }
