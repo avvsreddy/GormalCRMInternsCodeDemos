@@ -1,15 +1,22 @@
 ﻿using KnowledgeHubPortalMVCWebApplication.Models.DataAccess;
 using KnowledgeHubPortalMVCWebApplication.Models.Entities;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace KnowledgeHubPortalMVCWebApplication.Controllers
 {
+    [Authorize(Roles = "admin")]
     public class CatagoriesController : Controller
     {
 
-        ICatagoriesRepository repo = new CatagoriesRepository();
+        ICatagoriesRepository repo = null;// new CatagoriesRepository();
 
+        public CatagoriesController(ICatagoriesRepository repo)
+        {
+            this.repo = repo;
+        }
 
+        //[AllowAnonymous]
         // .../catagories/index
         public IActionResult Index(string data = null)
         {

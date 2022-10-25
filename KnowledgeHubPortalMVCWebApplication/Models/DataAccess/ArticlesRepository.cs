@@ -1,4 +1,5 @@
 ﻿using KnowledgeHubPortalMVCWebApplication.Models.Entities;
+using Microsoft.EntityFrameworkCore;
 
 namespace KnowledgeHubPortalMVCWebApplication.Models.DataAccess
 {
@@ -48,7 +49,7 @@ namespace KnowledgeHubPortalMVCWebApplication.Models.DataAccess
 
         public List<Article> GetArticlesForReview()
         {
-            var articles = (from a in db.Articles
+            var articles = (from a in db.Articles.Include("Catagory")
                             where a.IsApproved == false
                             select a).ToList();
             return articles;

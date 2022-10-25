@@ -1,4 +1,5 @@
 using KnowledgeHubPortalMVCWebApplication.Data;
+using KnowledgeHubPortalMVCWebApplication.Models.DataAccess;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 
@@ -16,9 +17,29 @@ namespace KnowledgeHubPortalMVCWebApplication
                 options.UseSqlServer(connectionString));
             builder.Services.AddDatabaseDeveloperPageExceptionFilter();
 
-            builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
-                .AddEntityFrameworkStores<ApplicationDbContext>();
-            builder.Services.AddControllersWithViews();
+
+            // dependancy injection
+
+            builder.Services.AddScoped<ICatagoriesRepository, CatagoriesRepository>();
+            builder.Services.AddScoped<IArticlesRepository, ArticlesRepository>();
+
+            // enable role based security
+            builder.Services.AddIdentity<IdentityUser, IdentityRole>(options => options.SignIn.RequireConfirmedAccount = false)
+                .AddEntityFrameworkStores<ApplicationDbContext>()
+                .AddDefaultUI();
+
+
+            //builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
+            //    .AddEntityFrameworkStores<ApplicationDbContext>();
+
+            //builder.Services.AddIdentity<IdentityUser, IdentityRole>()
+            // .AddEntityFrameworkStores<ApplicationDbContext>()
+            // .AddDefaultTokenProviders();
+            //builder.Services.AddMvc();
+
+
+            //builder.Services.AddDefaultIdentity<IdentityUser, IdentityRole>(opt => opt);
+            //builder.Services.AddControllersWithViews();
 
             var app = builder.Build();
 
