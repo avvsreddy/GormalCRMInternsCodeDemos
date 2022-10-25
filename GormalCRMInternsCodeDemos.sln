@@ -122,7 +122,12 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "EF", "EF", "{AA16A30F-26D9-
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "MVC Demo App", "MVC Demo App", "{B5C768C0-7594-414D-8F4F-5095E653ABA5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KnowledgeHubPortalMVCWebApplication", "KnowledgeHubPortalMVCWebApplication\KnowledgeHubPortalMVCWebApplication.csproj", "{B491FDEF-36C3-447F-969C-A2BA5D4B8B16}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KnowledgeHubPortalMVCWebApplication", "KnowledgeHubPortalMVCWebApplication\KnowledgeHubPortalMVCWebApplication.csproj", "{B491FDEF-36C3-447F-969C-A2BA5D4B8B16}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "MVC", "MVC", "{2775030D-D465-4518-B679-F9DFBFE49645}"
+	ProjectSection(SolutionItems) = preProject
+		..\..\..\..\Training Materials 2020\S\Materials and Labs\Materials and Labs\Eurofins April 2019 Batch\Iteration 2\MVC\Labs\Week-End-Labs-HRM System - Web Assignment.pdf = ..\..\..\..\Training Materials 2020\S\Materials and Labs\Materials and Labs\Eurofins April 2019 Batch\Iteration 2\MVC\Labs\Week-End-Labs-HRM System - Web Assignment.pdf
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -318,6 +323,7 @@ Global
 		{7D61983D-739C-4589-AB04-2F97D8EAA395} = {22FA2642-75A8-48A0-BEDD-983C8B3A3A50}
 		{AA16A30F-26D9-44AE-90F8-AC79FC269842} = {A4D32027-3A2B-4EA5-8F52-53EBC3CA0BDC}
 		{B491FDEF-36C3-447F-969C-A2BA5D4B8B16} = {B5C768C0-7594-414D-8F4F-5095E653ABA5}
+		{2775030D-D465-4518-B679-F9DFBFE49645} = {A4D32027-3A2B-4EA5-8F52-53EBC3CA0BDC}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {4E60B693-584C-479B-893E-41D1BC491C8E}
